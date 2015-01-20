@@ -33,9 +33,10 @@ console.log(tmp2Arr);
 //playSong(parseSong("C#*5 A*1 D*2"), 400, alert("finished!"));
 //playSong( [{pitch: 'A', beats: 1}, {pitch: 'C#', beats: 2}, {pitch: 'D', beats: 4}], 400, myAlert);
 
+
 var getSong = function() {
 	var songStr = prompt("Please enter a song string");
-	if (songStr=="") {
+	if (songStr=="" || songStr==null) {
 		return;
 	}
 	playSong(parseSong(songStr), 400, getSong );
