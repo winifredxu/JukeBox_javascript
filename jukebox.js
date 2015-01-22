@@ -1,27 +1,21 @@
 var parseNote = function(noteStr) {
-	var i =0;
-	var tmpArr = [];
-	var indNote = noteStr.split('*');
-	if (!indNote[1]) {
-		indNote[1] = 1;
+	var noteArr = noteStr.split('*');
+	if (noteArr[1]===undefined) {
+		noteArr[1] = 1;
 	}
-	while (indNote[i]) {
-		tmpArr.push(indNote[i]);
-		i +=1;
-	}
-//console.log(tmpArr);
-	return(tmpArr);
+	console.log(noteArr);
+	return(noteArr);
 };
 
 var parseSong = function(songStr) {
-	var noteArr = songStr.split(" ");
+	var songArr = songStr.split(" ");
 	var tmp2Arr = [];
 
-	for (var i=0; i <noteArr.length; i += 1) {
+	for (var i=0; i <songArr.length; i += 1) {
 		var noteObj = new Object;
 		var tmp1Arr = [];		
 
-		tmp1Arr = parseNote(noteArr[i]);
+		tmp1Arr = parseNote(songArr[i]);
 		noteObj["pitch"] = tmp1Arr[0];
 		noteObj["beats"] = tmp1Arr[1];	
 		tmp2Arr.push(noteObj);
