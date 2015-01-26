@@ -3,7 +3,7 @@ var parseNote = function(noteStr) {
 	if (noteArr[1]===undefined) {
 		noteArr[1] = 1;
 	}
-	console.log(noteArr);
+//	console.log(noteArr);
 	return(noteArr);
 };
 
